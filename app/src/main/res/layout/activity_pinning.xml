@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SSL Pinning - Demonstração de Vulnerabilidades"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Esta Activity demonstra vulnerabilidades relacionadas à ausência de SSL pinning e implementações inseguras."
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Seção de Vulnerabilidades -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VULNERABILIDADES DEMONSTRADAS:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Ausência de SSL pinning"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Implementação insegura de pinning"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Ignorar erros de SSL"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Aceitar certificados auto-assinados"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botões de Demonstração -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DEMONSTRAÇÕES:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_no_pinning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Sem SSL Pinning (Vulnerável)"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_bg_yellow" />
+
+            <Button
+                android:id="@+id/btn_insecure_pinning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. SSL Pinning Inseguro"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_bg_yellow" />
+
+            <Button
+                android:id="@+id/btn_secure_pinning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. SSL Pinning Seguro"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_bg" />
+
+            <Button
+                android:id="@+id/btn_mitm_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Simulação Ataque MITM"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_bg_yellow" />
+
+            <Button
+                android:id="@+id/btn_webview_insecure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. WebView Inseguro"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_bg_yellow" />
+
+            <Button
+                android:id="@+id/btn_webview_secure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. WebView Seguro"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_bg" />
+
+            <!-- Seção de Teste SSL Pinning -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TESTE SSL PINNING:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/activity_pinning_edt_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="URL para teste"
+                android:text="https://www.insecureshopapp.com"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_bg" />
+
+            <EditText
+                android:id="@+id/activity_pinning_edt_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pattern (opcional)"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_bg" />
+
+            <EditText
+                android:id="@+id/activity_pinning_edt_pinning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pinning (opcional)"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_bg" />
+
+            <Button
+                android:id="@+id/pinning_activity_btn_enviar_solicitacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar Solicitação SSL"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_bg_yellow" />
+
+            <!-- Área de Log -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGS DE DEMONSTRAÇÃO:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tv_logs"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#F5F5F5"
+                android:padding="8dp"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:scrollbars="vertical"
+                android:text="Logs aparecerão aqui...\n\nUse adb logcat -s PinningActivity para ver logs detalhados." />
+
+            <!-- Informações de Segurança -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RECOMENDAÇÕES DE SEGURANÇA:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Implementar SSL pinning com fingerprints SHA-256"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Nunca ignorar erros de SSL"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Usar Network Security Config"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Desabilitar cleartext traffic"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Validar certificados em WebViews"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
