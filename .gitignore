@@ -1,58 +1,73 @@
-# Diretórios e arquivos de compilação
+# ===================================
+# Android / Kotlin
+# ===================================
+
+# Build outputs
 /build
 /app/build
-/.gradle
-/local.properties
-
-# Arquivos de cache do Android Studio
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-
-# Arquivos do sistema
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Arquivos de compilação do Gradle
-.gradle/
 **/build/
+
+# Gradle
+.gradle/
+**/.gradle/
 !gradle/wrapper/gradle-wrapper.jar
-.gradle/caches/
-.gradle/wrapper/
+local.properties
 
-# Arquivos gerados
-captures/
-outputs/
-generated/
-*.iml
-
-# Configuração do Google Services (mantenha localmente)
+# Google Services
 google-services.json
 app/google-services.json
 
-# Arquivos de chaves e certificados (não versionar)
+# Keystores e propriedades sensíveis
 *.keystore
 *.jks
 keystore.properties
 
-# Configuração do NDK
+# NDK
 .externalNativeBuild
 
-# Arquivos temporários
-*.tmp
-*.temp
-
-# Relatórios
+# Relatórios e logs
+*.log
 lint/intermediates/
 lint/generated/
 lint/outputs/
 lint/tmp/
-
-# Arquivos de testes
 test-output/
+
+# Arquivos temporários
+*.tmp
+*.temp
+captures/
+outputs/
+generated/
+
+# ===================================
+# IDEs
+# ===================================
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/
+
+# JetBrains Fleet
+.fleet/
+
+# ===================================
+# Sistema Operacional
+# ===================================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
