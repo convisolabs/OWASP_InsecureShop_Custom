@@ -1,0 +1,58 @@
+# Diretórios e arquivos de compilação
+/build
+/app/build
+/.gradle
+/local.properties
+
+# Arquivos de cache do Android Studio
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos de compilação do Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/caches/
+.gradle/wrapper/
+
+# Arquivos gerados
+captures/
+outputs/
+generated/
+*.iml
+
+# Configuração do Google Services (mantenha localmente)
+google-services.json
+app/google-services.json
+
+# Arquivos de chaves e certificados (não versionar)
+*.keystore
+*.jks
+keystore.properties
+
+# Configuração do NDK
+.externalNativeBuild
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Relatórios
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+
+# Arquivos de testes
+test-output/
